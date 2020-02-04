@@ -10,14 +10,17 @@
         <img src="img/logo-technomart.svg" alt="Техномарт" width="109" height="19">
       </a>
 
-      <!--Здесь будет форма поиска-->
+      <form action="" method="get">
+        <label for="search-input" class="visually-hidden">Поиск</label>
+        <input type="search" name="search" id="search-input" placeholder="Поиск:">
+      </form>
 
       <a href="">Закладки: 0</a>
       <a href="">Корзина: 0</a>
       <a href="">Оформить заказ</a>
 
       <h1>
-        Интернет-магазин строительных&nbsp;материалов и&nbsp;инструментов для ремонта
+        Интернет-магазин строительных материалов и&nbsp;инструментов для&nbsp;ремонта
       </h1>
 
       <address>
@@ -43,7 +46,7 @@
 
     <main>
       <section>
-        <h2>Наши преимущества</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Наши преимущества</h2>
 
         <ul>
           <li>
@@ -70,7 +73,7 @@
       </section>
 
       <article>
-        <h2>Категории товаров</h2> <!--Скрытый заголовок-->
+        <h2 class="visually-hidden">Категории товаров</h2>
 
         <ul>
           <li>
@@ -279,7 +282,7 @@
         </p>
 
         <a href="https://goo.gl/maps/qD47p2rWTsNtLTgz6">
-          <img src="img/map.png" alt="Карта с расположением нашего офиса" width="300" height="158">
+          <img src="img/map.png" alt="Мы находимся в г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
         </a>
 
         <a href="">Заблудились? Напишите нам!</a>
@@ -334,14 +337,30 @@
     </footer>
 
     <section>
-      <h2>Карта с расположением нашего офиса</h2>
-      <!--Карта-->
+      <h2 class="visually-hidden">Как нас найти?</h2>
+      <img src="img/map-big.png" alt="По адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="940" height="446">
       <button type="button">Закрыть</button>
     </section>
 
     <section>
-      <h2>Напишите нам</h2>
-      <!--Форма обратной связи-->
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form action="" method="post">
+        <p>
+          <label>
+            Ваше имя:
+            <input type="text" name="userName" placeholder="Имя Фамилия">
+          </label>
+          <label>
+            Ваш e-mail:
+            <input type="email" name="userMail" placeholder="email@example.com">
+          </label>
+        </p>
+        <label>
+          Текст письма:
+          <textarea name="userMessage" placeholder="В свободной форме"></textarea>
+        </label>
+        <button type="submit">Отправить</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
 
