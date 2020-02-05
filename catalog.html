@@ -11,7 +11,7 @@
       </a>
 
       <form action="" method="get">
-        <label for="search-input" class="visually-hidden">Поиск</label>
+        <label class="visually-hidden" for="search-input">Поиск</label>
         <input type="search" name="search" id="search-input" placeholder="Поиск:">
       </form>
 
@@ -63,30 +63,43 @@
           <form action="" method="get">
             <fieldset>
               <legend>Цена:</legend>
-              <!--Здесь будут элементы формы фильтра-->
+
+              <div class="price-range">
+                <div class="price-range__pin price-range__pin-min"></div>
+                <div class="price-range__pin price-range__pin-max"></div>
+              </div>
+
+              <p>
+                <label class="visually-hidden" for="minPrice-input">Минимальная цена</label>
+                <input type="number" name="minPrice" id="minPrice-input" value="0">
+              </p>
+              <p>
+                <label class="visually-hidden" for="maxPrice-input">Максимальная цена</label>
+                <input type="number" name="maxPrice" id="maxPrice-input" value="30000">
+              </p>
             </fieldset>
 
             <fieldset>
               <legend>Производители:</legend>
               <ul>
                 <li>
-                  <input type="checkbox" name="brandBosch" id="brandBosh-input">
+                  <input class="visually-hidden" type="checkbox" name="brandBosch" id="brandBosh-input">
                   <label for="brandBosh-input">Bosch</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="brandInterskol" id="brandInterskol-input">
+                  <input class="visually-hidden" type="checkbox" name="brandInterskol" id="brandInterskol-input">
                   <label for="brandInterskol-input">Интерскол</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="brandMakita" id="brandMakita-input">
+                  <input class="visually-hidden" type="checkbox" name="brandMakita" id="brandMakita-input">
                   <label for="brandMakita-input">Makita</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="brandDewalt" id="brandDewalt-input">
+                  <input class="visually-hidden" type="checkbox" name="brandDewalt" id="brandDewalt-input">
                   <label for="brandDewalt-input">Dewalt</label>
                 </li>
                 <li>
-                  <input type="checkbox" name="brandHitachi" id="brandHitachi-input">
+                  <input class="visually-hidden" type="checkbox" name="brandHitachi" id="brandHitachi-input">
                   <label for="brandHitachi-input">Hitachi</label>
                 </li>
               </ul>
@@ -96,11 +109,11 @@
               <legend>Питание:</legend>
               <ul>
                 <li>
-                  <input type="radio" name="battery" id="batteryTrue-input" value="true" checked>
+                  <input class="visually-hidden" type="radio" name="battery" id="batteryTrue-input" value="true" checked>
                   <label for="batteryTrue-input">Аккумуляторные</label>
                 </li>
                 <li>
-                  <input type="radio" name="battery" id="batteryFalse-input" value="false">
+                  <input class="visually-hidden" type="radio" name="battery" id="batteryFalse-input" value="false">
                   <label for="batteryFalse-input">Сетевые</label>
                 </li>
               </ul>
