@@ -656,6 +656,15 @@ a {
   text-transform: uppercase;
 }
 
+.filter-input {
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+
+  background-color: #f7f3ec;
+  border: none;
+}
+
 /* catalog filter - producers, battery */
 
 .filter-producers,
