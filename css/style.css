@@ -44,6 +44,10 @@ a {
   text-transform: uppercase;
 }
 
+.additional-info {
+  background-color: #f2f6f8;
+}
+
 .content-paragraph {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
