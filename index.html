@@ -75,28 +75,46 @@
           </li>
         </ul>
 
-      <article>
-        <h2 class="visually-hidden">Категории товаров</h2>
+        <article class="product-categories">
+          <h3 class="visually-hidden">Категории товаров</h3>
 
-        <ul>
-          <li>
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-          </li>
-          <li>
-            <h3>Дрели</h3>
-            <p>Соседям на радость!</p>
-          </li>
-        </ul>
+          <input class="visually-hidden" type="radio" name="category" value="hammers" id="hammers-input" checked>
+          <input class="visually-hidden" type="radio" name="category" value="drill" id="drill-input">
 
-        <button type="button">Перфораторы</button> <!--Кнопки-маркеры в слайдере-->
-        <button type="button">Дрели</button>
+          <ul class="category-slides">
+            <li class="category-hammers">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </li>
+            <li class="category-drill">
+              <h3>Дрели</h3>
+              <p>Соседям на радость!</p>
+            </li>
+          </ul>
 
-        <button type="button">Назад</button>
-        <button type="button">Вперёд</button>
+          <ul class="category-markers">
+            <li>
+              <label for="hammers-input">
+                <span class="visually-hidden">Перфораторы</span>
+              </label>
+            </li>
+            <li>
+              <label for="drill-input">
+                <span class="visually-hidden">Дрели</span>
+              </label>
+            </li>
+          </ul>
 
-        <a href="catalog.html">Открыть каталог</a>
-      </article>
+          <button class="slider-nav-button slider-prev" type="button">
+            <span class="visually-hidden">Назад</span>
+          </button>
+          <button class="slider-nav-button slider-next" type="button">
+            <span class="visually-hidden">Вперёд</span>
+          </button>
+
+          <a class="button button-primary" href="catalog.html">Открыть каталог</a>
+        </article>
+
         <ul class="service-advantages">
           <li class="advantages-item advantages-discounts">
             <h3>Скидки 50%</h3>
