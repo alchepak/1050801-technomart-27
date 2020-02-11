@@ -536,6 +536,72 @@ a {
   opacity: 0.3;
 }
 
+/* index - service tabs */
+
+.service-tabs {
+  list-style: none;
+}
+
+.service-tabs label {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 30px;
+
+  background-color: #32425c;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+}
+
+.service-tabs label:hover {
+  background-color: #293449;
+}
+
+.service-container input:focus ~ label {
+  outline: 1px auto;
+}
+
+.service-container input:nth-child(1):checked ~ .service-tabs label[for="delivery-input"],
+.service-container input:nth-child(2):checked ~ .service-tabs label[for="guarantee-input"],
+.service-container input:nth-child(3):checked ~ .service-tabs label[for="credit-input"] {
+  color: #32425c;
+
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* index - service blocks */
+
+.service-blocks {
+  list-style: none;
+}
+
+.service-blocks h3 {
+  color: #32425c;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.service-blocks li {
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.service-delivery {
+  background-image: url("../img/service-delivery.png");
+}
+
+.service-guarantee {
+  background-image: url("../img/service-guarantee.png");
+}
+
+.service-credit {
+  background-image: url("../img/service-credit.png");
+}
+
 /* index - about */
 
 .delivery-list {
