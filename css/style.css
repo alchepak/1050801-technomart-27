@@ -665,6 +665,28 @@ a {
   border: none;
 }
 
+/* catalog filter = price slider */
+
+.price-slider {
+  background-color: #f7f3ec;
+}
+
+.range-slider {
+  background-color: #d7dcde;
+}
+
+.range-slider-line {
+  background-color: #00ca74;
+}
+
+.range-marker {
+  background-color: transparent;
+  background-image: url("../img/filter-button.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border: none;
+}
+
 /* catalog filter - producers, battery */
 
 .filter-producers,

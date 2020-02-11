@@ -82,15 +82,22 @@
             <fieldset>
               <legend>Цена:</legend>
 
-              <!-- слайдер цены -->
+              <div class="price-slider">
+                <div class="range-slider">
+                  <div class="range-slider-line">
+                    <button class="range-marker" id="min-price-marker" type="button"></button>
+                    <button class="range-marker" id="max-price-marker" type="button"></button>
+                  </div>
+                </div>
+              </div>
 
               <p>
-                <label class="visually-hidden" for="minPrice-input">Минимальная цена</label>
-                <input class="filter-input" type="number" name="minPrice" id="minPrice-input" value="0">
+                <label class="visually-hidden" for="min-price-input">Минимальная цена</label>
+                <input class="filter-input" type="number" name="minPrice" id="min-price-input" value="0">
               </p>
               <p>
-                <label class="visually-hidden" for="maxPrice-input">Максимальная цена</label>
-                <input class="filter-input" type="number" name="maxPrice" id="maxPrice-input" value="30000">
+                <label class="visually-hidden" for="max-price-input">Максимальная цена</label>
+                <input class="filter-input" type="number" name="maxPrice" id="max-price-input" value="30000">
               </p>
             </fieldset>
 
