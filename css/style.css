@@ -494,6 +494,40 @@ a {
   list-style: none;
 }
 
+/* index - section popular */
+
+.section-popular header {
+  background-color: #f9f5f0;
+}
+
+.section-popular h2 {
+  color: #32425c;
+}
+
+/* elements list */
+
+.elements-list {
+  font-family: "PT Sans", Arial, sans-serif;
+  list-style: none;
+}
+
+.elements-list-item {
+  text-align: center;
+
+  border-color: #e5e5e5;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.elements-list-item:hover {
+  box-shadow: 0 10px 25px #293449;
+}
+
+.elements-list-item[href]:active {
+  box-shadow: 0 4px 10px #293449;
+  opacity: 0.3;
+}
+
 /* index - about */
 
 .delivery-list {
@@ -572,50 +606,67 @@ a {
   color: rgba(0, 0, 0, 0.4);
 }
 
-/* catalog - products */
+/* catalog - sort */
 
-.products-list {
+.sort-aside {
+  background-color: #f7f3ec;
+}
+
+.sort-links {
   font-family: "PT Sans", Arial, sans-serif;
   list-style: none;
 }
 
-.products-list-item {
-  text-align: center;
-
-  border-color: #e5e5e5;
-  border-style: solid;
-  border-width: 1px;
+.sort-links a {
+  color: #ee3643;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.products-list-item:hover {
-  box-shadow: 0 10px 25px #293449;
+.sort-links a[href] {
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #ee3643;
 }
 
-.products-list-item:hover > .product-buttons {
+.sort-links a[href]:hover,
+.sort-links a[href]:active,
+.sort-links a[href]:focus {
+  color: #000000;
+}
+
+.sort-buttons {
+  list-style: none;
+}
+
+/* catalog - products */
+
+.elements-list-item:hover > .product-buttons {
   display: block;
 }
 
-.products-list-item h3 {
+.elements-list-item h3 {
   font-size: 18px;
   line-height: 20px;
 }
 
-.products-list-item .product-title {
+.elements-list-item .product-title {
   text-transform: uppercase;
 }
 
-.products-list-item .product-buttons {
+.elements-list-item .product-buttons {
   display: none;
 }
 
-.products-list-item .old-price {
+.elements-list-item .old-price {
   color: #999999;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
 }
 
-.products-list-item .price {
+.elements-list-item .price {
   color: #ffffff;
   font-size: 17px;
   font-weight: bold;
