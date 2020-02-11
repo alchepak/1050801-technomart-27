@@ -796,3 +796,17 @@ a {
   color: rgba(50, 66, 92, 0.3);
   border-color: rgba(50, 66, 92, 0.3);
 }
+
+/* catalog - pagination */
+
+.pagination {
+  list-style: none;
+}
+
+.current-page {
+  color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+
+  background-color: #ee3643;
+}
