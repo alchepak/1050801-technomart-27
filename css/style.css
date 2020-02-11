@@ -456,6 +456,44 @@ a {
   background-repeat: no-repeat;
 }
 
+/* index - product categories */
+
+.category-slides {
+  list-style: none;
+}
+
+.category-slides li {
+  color: #ffffff;
+
+  background-color: #bbb7b2;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.category-slides h3 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.category-slides p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.category-hammers {
+  background-image: url("../img/categ-slider-item-1.jpg");
+}
+
+.category-drill {
+  background-image: url("../img/categ-slider-item-2.jpg");
+}
+
+.category-markers {
+  list-style: none;
+}
+
 /* index - about */
 
 .delivery-list {
