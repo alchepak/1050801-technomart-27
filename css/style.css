@@ -392,6 +392,70 @@ a {
   display: none;
 }
 
+/* index - advantages */
+
+.product-advantages {
+  list-style: none;
+}
+
+.advantages-item {
+  color: #ffffff;
+}
+
+.advantages-item .button {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.advantages-item .button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.advantages-item .button:active,
+.advantages-item .button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.advantages-materials {
+  background-color: #ffbf47;
+  background-image: url("../img/icon-1.svg");
+  background-position: right center; /* временное размещение фона */
+  background-repeat: no-repeat;
+}
+
+.advantages-tools {
+  background-color: #3bbce3;
+  background-image: url("../img/icon-2.svg");
+  background-position: right center; /* временное размещение фона */
+  background-repeat: no-repeat;
+}
+
+.advantages-machinery {
+  background-color: #dc91d8;
+  background-image: url("../img/icon-3.svg");
+  background-position: right center; /* временное размещение фона */
+  background-repeat: no-repeat;
+}
+
+.advantages-discounts {
+  background-color: #8ed78f;
+  background-image: url("../img/icon-4.svg");
+  background-position: right center; /* временное размещение фона */
+  background-repeat: no-repeat;
+}
+
+.advantages-delivery {
+  background-color: #ffc047;
+  background-image: url("../img/icon-5.svg");
+  background-position: right center; /* временное размещение фона */
+  background-repeat: no-repeat;
+}
+
 /* index - about */
 
 .delivery-list {
