@@ -249,6 +249,10 @@ a {
 
 /* profile list */
 
+.profile-list {
+  list-style: none;
+}
+
 .profile-link {
   color: #32425c;
   font-size: 16px;
