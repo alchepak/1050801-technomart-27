@@ -256,57 +256,54 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Сервисы</h2>
+      <section class="additional-info">
+        <h2 class="section-title">Сервисы</h2>
 
-        <p>
+        <p class="content-paragraph">
           Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
 
-        <ul>
-          <li>
-            <input type="radio" name="service" value="delivery" id="delivery-input" checked>
-            <label for="delivery-input">Доставка</label>
-          </li>
-          <li>
-            <input type="radio" name="service" value="guarantee" id="guarantee-input">
-            <label for="guarantee-input">Гарантия</label>
-          </li>
-          <li>
-            <input type="radio" name="service" value="credit" id="credit-input">
-            <label for="credit-input">Кредит</label>
-          </li>
-        </ul>
+        <div class="service-container">
+          <input class="visually-hidden" type="radio" name="service" value="delivery" id="delivery-input" checked>
+          <input class="visually-hidden" type="radio" name="service" value="guarantee" id="guarantee-input">
+          <input class="visually-hidden" type="radio" name="service" value="credit" id="credit-input">
 
-        <ul>
-          <li>
-            <h3>Доставка</h3>
-            <p>
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-            </p>
-          </li>
+          <ul class="service-tabs">
+            <li><label for="delivery-input">Доставка</label></li>
+            <li><label for="guarantee-input">Гарантия</label></li>
+            <li><label for="credit-input">Кредит</label></li>
+          </ul>
 
-          <li>
-            <h3>Гарантия</h3>
-            <p>
-              Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-            </p>
-          </li>
+          <ul class="service-blocks">
+            <li class="service-delivery">
+              <h3>Доставка</h3>
+              <p class="content-paragraph">
+                Мы с удовольствием доставим ваш товар прямо<br>
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,<br>
+                поднимая его на ваш этаж!
+              </p>
+            </li>
 
-          <li>
-            <h3>Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще!<br>
-              Кредитные консультанты придут вам на помощь.
-            </p>
-            <a href="">Отправить заявку</a>
-          </li>
-        </ul>
+            <li class="service-guarantee">
+              <h3>Гарантия</h3>
+              <p class="content-paragraph">
+                Если купленный у нас товар поломается или заискрит,<br>
+                а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                Дом уж восстановите как-нибудь сами.
+              </p>
+            </li>
+
+            <li class="service-credit">
+              <h3>Кредит</h3>
+              <p class="content-paragraph">
+                Залезть в долговую яму стало проще!<br>
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="button button-primary" href="">Отправить заявку</a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <div class="columns">
