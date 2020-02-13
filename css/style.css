@@ -331,6 +331,10 @@ a {
   background-color: #32425c;
 }
 
+.page-footer .container {
+  display: flex;
+}
+
 .bottom-address {
   font-size: 18px;
   font-style: normal;
@@ -344,6 +348,10 @@ a {
 /* page footer - sub menu */
 
 .sub-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   font-size: 18px;
   line-height: 24px;
 
@@ -409,6 +417,9 @@ a {
 /* page footer - social */
 
 .social {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
