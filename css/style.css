@@ -215,7 +215,7 @@ a {
 
 /* page header - middle */
 
-.page-header-middle .container {
+.page-header-middle {
   display: flex;
   padding-top: 46px;
   padding-bottom: 40px;
