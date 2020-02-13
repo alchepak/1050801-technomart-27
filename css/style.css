@@ -671,12 +671,21 @@ a {
 /* inner pages - common */
 
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 
   list-style: none;
+}
+
+.breadcrumbs li {
+  margin-top: 23px;
+  margin-bottom: 24px;
 }
 
 .breadcrumbs a {
@@ -686,6 +695,12 @@ a {
 /* catalog */
 
 .catalog-section h2 {
+  margin: 0;
+  padding-top: 32px;
+  padding-right: 28px;
+  padding-bottom: 34px;
+  padding-left: 28px;
+
   color: #32425c;
   background-color: #f2f6f8;
 }
