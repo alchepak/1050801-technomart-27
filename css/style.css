@@ -43,6 +43,11 @@ a {
   padding: 0 10px;
 }
 
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
 .section-title {
   font-size: 30px;
   font-weight: normal;
@@ -640,6 +645,11 @@ a {
 
 /* index - about */
 
+.about-section {
+  width: 540px;
+  padding-bottom: 86px;
+}
+
 .delivery-list {
   font-size: 18px;
   line-height: 20px;
@@ -648,6 +658,11 @@ a {
 }
 
 /* index - contacts */
+
+.contacts-section {
+  width: 300px;
+  padding-bottom: 86px;
+}
 
 .map {
   background-color: #f5f3ed;
