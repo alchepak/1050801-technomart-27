@@ -706,9 +706,10 @@ a {
 
 .catalog-section h2 {
   margin: 0;
-  padding-top: 32px;
+  margin-bottom: 27px;
+  padding-top: 30px;
   padding-right: 28px;
-  padding-bottom: 34px;
+  padding-bottom: 29px;
   padding-left: 28px;
 
   color: #32425c;
