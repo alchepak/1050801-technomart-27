@@ -116,11 +116,12 @@ a {
 /* page header */
 
 .page-header {
-  min-height: 42px;
   background-color: #f4f7f9;
 }
 
 .page-header-top {
+  min-height: 42px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
