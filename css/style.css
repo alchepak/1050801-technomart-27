@@ -548,6 +548,10 @@ a {
 /* index - section popular */
 
 .section-popular header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: #f9f5f0;
 }
 
@@ -587,6 +591,13 @@ a {
 .elements-list-item[href]:active {
   box-shadow: 0 4px 10px #293449;
   opacity: 0.3;
+}
+
+/* index - brands list */
+
+.brands-list {
+  padding-top: 20px;
+  padding-bottom: 85px;
 }
 
 /* index - service tabs */
