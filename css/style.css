@@ -566,6 +566,7 @@ a {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-top: 20px;
 
   font-family: "PT Sans", Arial, sans-serif;
   list-style: none;
@@ -593,10 +594,13 @@ a {
   opacity: 0.3;
 }
 
-/* index - brands list */
+/* index - popular list */
+
+.popular-products-list li:last-child {
+  margin-right: 0;
+}
 
 .brands-list {
-  padding-top: 20px;
   padding-bottom: 85px;
 }
 
