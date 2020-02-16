@@ -57,6 +57,8 @@ a {
 
 .additional-info {
   background-color: #f2f6f8;
+  padding-top: 68px;
+  padding-bottom: 68px;
 }
 
 .content-paragraph {
@@ -606,6 +608,10 @@ a {
 
 .service-tabs label:hover {
   background-color: #293449;
+}
+
+.service-container {
+  display: flex;
 }
 
 .service-container input:focus ~ label {
