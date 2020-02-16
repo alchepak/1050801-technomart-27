@@ -710,6 +710,10 @@ a {
 
 /* catalog */
 
+.catalog-section {
+  padding-bottom: 60px;
+}
+
 .catalog-section h2 {
   margin: 0;
   margin-bottom: 27px;
@@ -807,10 +811,15 @@ a {
 /* catalog - sort */
 
 .sort-aside {
+  display: flex;
   background-color: #f7f3ec;
 }
 
 .sort-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+
   font-family: "PT Sans", Arial, sans-serif;
   list-style: none;
 }
