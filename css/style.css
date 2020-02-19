@@ -145,10 +145,29 @@ a {
 /* logo */
 
 .logo {
+  position: relative;
+
+  width: 220px;
+  padding-top: 12px;
+  padding-bottom: 7px;
+
   text-align: center;
 
   background-color: #ee3643;
-  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.24);
+
+}
+
+.logo::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  width: 100%;
+  height: 5px;
+
+  background-color: #b52933;
 }
 
 .logo[href]:hover {
@@ -162,11 +181,30 @@ a {
 
 /* search form */
 
+.search {
+  position: relative;
+}
+
 .search input {
+  width: 270px;
+  min-height: 42px;
+  padding-left: 49px;
+
   color: #ffffff;
 
   background-color: transparent;
   border: none;
+}
+
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  width: 17px;
+  height: 17px;
+
+  opacity: 0.3;
 }
 
 .search input:hover {
@@ -178,6 +216,16 @@ a {
   background-color: #ffffff;
 }
 
+.search input:hover + .search-icon,
+.search input:focus + .search-icon {
+  opacity: 1;
+}
+
+.search input:focus + .search-icon path {
+  fill: #ee3643;
+  opacity: 1;
+}
+
 .search input::placeholder {
   color: #ffffff;
 }
@@ -185,6 +233,13 @@ a {
 /* shop buttons */
 
 .shop-button {
+  position: relative;
+
+  width: 150px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 44px;
+
   color: #ffffff;
 }
 
@@ -202,9 +257,46 @@ a {
   background-color: #161d29;
 }
 
+.shop-button::before {
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+}
+
+.shop-button:hover::before {
+  opacity: 1;
+}
+
+.shop-button:active::before {
+  opacity: 0.5;
+}
+
+.link-bookmarks::before {
+  top: 12px;
+  left: 17px;
+
+  width: 14px;
+  height: 16px;
+
+  background-image: url("../img/icon-bookmark.svg");
+}
+
+.link-cart::before {
+  top: 12px;
+  left: 18px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+}
+
 /* shop button - link order */
 
 .link-order {
+  padding-left: 0;
+
+  text-align: center;
   background-color: #63a63e;
 }
 
