@@ -148,7 +148,7 @@ a {
   position: relative;
 
   width: 220px;
-  padding-top: 12px;
+  padding-top: 13px;
   padding-bottom: 7px;
 
   text-align: center;
@@ -238,9 +238,10 @@ a {
   width: 150px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 44px;
+  padding-left: 17px;
 
   color: #ffffff;
+  text-align: center;
 }
 
 .shop-button.item-added {
@@ -298,8 +299,6 @@ a {
 
 .link-order {
   padding-left: 0;
-
-  text-align: center;
   background-color: #63a63e;
 }
 
@@ -318,14 +317,14 @@ a {
   display: flex;
   justify-content: space-between;
   padding-top: 46px;
-  padding-bottom: 40px;
+  padding-bottom: 39px;
 }
 
 .page-title {
-  align-self: center;
   width: 197px;
-  margin: 0;
-  margin-left: 53px;
+  margin-top: 3px;
+  margin-left: 52px;
+  margin-bottom: 0;
 
   color: #ee3643;
   font-size: 16px;
@@ -348,10 +347,10 @@ a {
   position: relative;
 
   display: block;
-  margin-bottom: 3px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-left: 20px;
+  margin-bottom: 4px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 24px;
 
   color: #ee3643;
   font-size: 21px;
@@ -386,7 +385,7 @@ a {
 
 .login-button {
   padding-top: 12px;
-  padding-right: 25px;
+  padding-right: 24px;
   padding-bottom: 12px;
   padding-left: 24px;
 
@@ -416,7 +415,7 @@ a {
 
   width: 121px;
   margin-right: 10px;
-  padding-left: 45px;
+  padding-left: 47px;
 }
 
 .login-sign-in .login-icon {
@@ -469,7 +468,7 @@ a {
 
 .main-nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0;
   padding: 0;
 
@@ -479,9 +478,16 @@ a {
 }
 
 .main-nav a {
+  display: block;
+  padding-top: 20px;
+  padding-right: 31px;
+  padding-bottom: 23px;
+  padding-left: 31px;
+
   color: #ffffff;
   font-size: 17px;
   line-height: 1;
+  text-align: center;
 }
 
 .main-nav a:hover {
