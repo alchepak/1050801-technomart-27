@@ -238,10 +238,9 @@ a {
   width: 150px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 17px;
+  padding-left: 44px;
 
   color: #ffffff;
-  text-align: center;
 }
 
 .shop-button.item-added {
@@ -285,6 +284,10 @@ a {
   background-image: url("../img/icon-bookmark.svg");
 }
 
+.link-cart {
+  padding-left: 49px;
+}
+
 .link-cart::before {
   top: 12px;
   left: 18px;
@@ -298,6 +301,8 @@ a {
 /* shop button - link order */
 
 .link-order {
+  text-align: center;
+
   padding-left: 0;
   background-color: #63a63e;
 }
