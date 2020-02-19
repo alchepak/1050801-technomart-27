@@ -261,6 +261,9 @@ a {
   content: "";
   position: absolute;
   opacity: 0.3;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .shop-button:hover::before {
@@ -313,12 +316,16 @@ a {
 
 .page-header-middle {
   display: flex;
+  justify-content: space-between;
   padding-top: 46px;
   padding-bottom: 40px;
 }
 
 .page-title {
+  align-self: center;
+  width: 197px;
   margin: 0;
+  margin-left: 53px;
 
   color: #ee3643;
   font-size: 16px;
@@ -328,6 +335,8 @@ a {
 }
 
 .top-address {
+  width: 270px;
+
   color: #32425c;
   font-size: 14px;
   font-style: normal;
@@ -336,6 +345,14 @@ a {
 }
 
 .top-address a {
+  position: relative;
+
+  display: block;
+  margin-bottom: 3px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+
   color: #ee3643;
   font-size: 21px;
   line-height: 1;
@@ -345,12 +362,38 @@ a {
   border-width: 3px;
 }
 
+.top-address a::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 /* login */
 
+.login {
+  display: flex;
+  align-items: flex-start;
+}
+
 .login-button {
+  padding-top: 12px;
+  padding-right: 25px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+
   color: #000000;
   font-size: 21px;
   line-height: 1;
+  vertical-align: middle;
 
   background-color: #ffffff;
 }
@@ -367,6 +410,32 @@ a {
 .login-button:focus {
   color: rgba(0, 0, 0, 0.3);
 }
+
+.login-sign-in {
+  position: relative;
+
+  width: 121px;
+  margin-right: 10px;
+  padding-left: 45px;
+}
+
+.login-sign-in .login-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  width: 20px;
+  height: 17px;
+}
+
+.login-sign-in:hover path {
+  fill: #32425c;
+}
+
+.login-sign-in:active path,
+.login-sign-in:focus path {
+   fill: #c5c5c5;
+ }
 
 /* profile list */
 
