@@ -183,10 +183,11 @@ a {
 
 .search {
   position: relative;
+  flex-grow: 1;
 }
 
 .search input {
-  width: 270px;
+  width: 100%;
   min-height: 42px;
   padding-left: 49px;
 
@@ -320,7 +321,6 @@ a {
 
 .page-header-middle {
   display: flex;
-  justify-content: space-between;
   padding-top: 46px;
   padding-bottom: 39px;
 }
@@ -340,6 +340,7 @@ a {
 
 .top-address {
   width: 270px;
+  margin-left: 71px;
 
   color: #32425c;
   font-size: 14px;
@@ -359,7 +360,7 @@ a {
 
   color: #ee3643;
   font-size: 21px;
-  line-height: 1;
+  line-height: 21px;
 
   border-color: #ffffff;
   border-style: solid;
@@ -386,6 +387,10 @@ a {
 .login {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
+
+  max-width: 300px;
+  margin-left: auto;
 }
 
 .login-button {
@@ -396,7 +401,7 @@ a {
 
   color: #000000;
   font-size: 21px;
-  line-height: 1;
+  line-height: 21px;
   vertical-align: middle;
 
   background-color: #ffffff;
@@ -404,6 +409,10 @@ a {
 
 .login-button:hover {
   color: #ee3643;
+}
+
+.login-button:hover path {
+  fill: #32425c;
 }
 
 .login-profile:hover {
@@ -414,6 +423,11 @@ a {
 .login-button:focus {
   color: rgba(0, 0, 0, 0.3);
 }
+
+.login-button:active path,
+.login-button:focus path {
+   fill: #c5c5c5;
+ }
 
 .login-sign-in {
   position: relative;
@@ -432,28 +446,78 @@ a {
   height: 17px;
 }
 
-.login-sign-in:hover path {
-  fill: #32425c;
+.login-profile {
+  position: relative;
+
+  width: 257px;
+  padding-left: 47px;
+  padding-right: 0;
 }
 
-.login-sign-in:active path,
-.login-sign-in:focus path {
-   fill: #c5c5c5;
- }
+.login-profile .login-user-icon {
+  position: absolute;
+  top: 13px;
+  left: 14px;
+
+  width: 20px;
+  height: 18px;
+}
+
+.login-log-out {
+  position: relative;
+
+  width: 43px;
+  min-height: 45px;
+  padding: 0;
+}
+
+.login-log-out .log-out-icon {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+
+  width: 21px;
+  height: 17px;
+}
 
 /* profile list */
 
 .profile-list {
+  display: flex;
+  flex-wrap: wrap;
+
   margin: 0;
+  margin-top: 3px;
+  margin-left: 18px;
   padding: 0;
 
   list-style: none;
+}
+
+.profile-list li:not(:first-child) {
+  position: relative;
+  margin-left: 32px;
+}
+
+.profile-list li:not(:first-child)::before {
+  content: "";
+
+  position: absolute;
+  top: 7px;
+  left: -17px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #32425c;
+  border-radius: 50%;
 }
 
 .profile-link {
   color: #32425c;
   font-size: 16px;
   line-height: 18px;
+  text-decoration: underline;
 }
 
 .profile-link:hover {
@@ -474,6 +538,7 @@ a {
 .main-nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
@@ -491,7 +556,7 @@ a {
 
   color: #ffffff;
   font-size: 17px;
-  line-height: 1;
+  line-height: 17px;
   text-align: center;
 }
 
@@ -728,7 +793,7 @@ a {
 .category-slides h3 {
   font-size: 36px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 36px;
   text-transform: uppercase;
 }
 
@@ -867,7 +932,7 @@ a {
   color: #32425c;
   font-size: 36px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 36px;
 
   text-transform: uppercase;
 }
