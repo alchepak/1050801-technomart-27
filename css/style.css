@@ -109,7 +109,7 @@ a {
   padding-bottom: 9px;
   padding-left: 17px;
 
-  color: #ffffff;
+  color: #000000;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -117,11 +117,14 @@ a {
   text-transform: uppercase;
   vertical-align: top;
 
+  background-color: #ffffff;
   border-radius: 3px;
   cursor: pointer;
 }
 
 .button-primary {
+  color: #ffffff;
+
   background-color: #ee3643;
   border: 0;
 }
@@ -136,7 +139,6 @@ a {
 }
 
 .button-secondary {
-  color: #000000;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
 
@@ -791,9 +793,58 @@ a {
   margin-left: 48px;
 }
 
-/* modal */
+/* popup */
 
-.modal {
+.form-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 20px 40px 0 #293449;
+}
+
+.popup-controls {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 112px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  background-color: #f4f4f4;
+}
+
+.popup-controls > .button {
+  width: 100%;
+}
+
+.popup-controls > .button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.popup-close-button {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  width: 21px;
+  height: 21px;
+
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
   display: none;
 }
 
@@ -830,6 +881,7 @@ a {
 }
 
 .advantages-item .button {
+  color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -1565,6 +1617,8 @@ a {
   width: 138px;
   margin-bottom: 16px;
 
+  color: #ffffff;
+
   background-color: #63a63e;
   box-shadow: inset 0 -3px #367315;
 }
@@ -1616,4 +1670,42 @@ a {
   font-size: 13px;
 
   background-color: #ee3643;
+}
+
+/* catalog - product added popup */
+
+.product-added-popup {
+  display: flex; /* временно для отображения результата */
+  width: 620px;
+  height: 282px;
+  margin-top: -141px;
+  margin-left: -310px;
+}
+
+.product-added-popup h2 {
+  position: relative;
+
+  margin: 0;
+  margin-top: 65px;
+  margin-left: 81px;
+  padding-left: 98px;
+
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.product-added-popup h2:before {
+  content: "";
+
+  position: absolute;
+  top: -17px;
+  left: 0;
+
+  width: 66px;
+  height: 66px;
+
+  background-image: url("../img/icon-mark.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
