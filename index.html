@@ -430,25 +430,32 @@
       </button>
     </section>
 
-    <section class="popup">
+    <section class="popup feedback-popup">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="" method="post">
-        <p>
+      <form class="form-popup" action="" method="post">
+        <div class="feedback-inputs">
+          <p class="feedback-contacts">
+            <label>
+              Ваше имя:
+              <input type="text" name="userName" placeholder="Имя Фамилия">
+            </label>
+            <label>
+              Ваш e-mail:
+              <input type="email" name="userMail" placeholder="email@example.com">
+            </label>
+          </p>
+
           <label>
-            Ваше имя:
-            <input type="text" name="userName" placeholder="Имя Фамилия">
+            Текст письма:
+            <textarea name="userMessage" placeholder="В свободной форме"></textarea>
           </label>
-          <label>
-            Ваш e-mail:
-            <input type="email" name="userMail" placeholder="email@example.com">
-          </label>
-        </p>
-        <label>
-          Текст письма:
-          <textarea name="userMessage" placeholder="В свободной форме"></textarea>
-        </label>
-        <button type="submit">Отправить</button>
+        </div>
+
+        <div class="popup-controls">
+          <button class="button button-primary" type="submit">Отправить</button>
+        </div>
       </form>
+
       <button class="popup-close-button" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>

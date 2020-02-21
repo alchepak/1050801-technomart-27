@@ -805,6 +805,36 @@ a {
   box-shadow: 0 20px 40px 0 #293449;
 }
 
+.form-popup input,
+.form-popup textarea {
+  display: block;
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+}
+
+.form-popup textarea {
+  height: 114px;
+  resize: none;
+}
+
+.form-popup input:hover,
+.form-popup textarea:hover {
+  border-color: #b5b5b5;
+}
+
+.form-popup input:focus,
+.form-popup textarea:focus {
+  border-color: #ee3643;
+}
+
 .popup-controls {
   display: flex;
   align-items: center;
@@ -1198,6 +1228,53 @@ a {
 
 .contacts-section .button {
   width: 300px;
+}
+
+/* index - popup */
+
+.feedback-popup {
+  display: flex; /* временно для отображения результата */
+  width: 620px;
+  height: 430px;
+  margin-top: -215px;
+  margin-left: -310px;
+}
+
+.feedback-popup .popup-close-button {
+  top: 17px;
+}
+
+.feedback-popup .form-popup {
+  width: 100%;
+}
+
+.feedback-inputs {
+  width: 460px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.feedback-inputs .feedback-contacts {
+  display: flex;
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.feedback-inputs label {
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.feedback-inputs label:not(:last-child) {
+  margin-right: 20px;
+}
+
+.feedback-inputs input,
+.feedback-inputs textarea {
+  width: 100%;
+  margin-top: 8px;
 }
 
 /* inner pages - common */
