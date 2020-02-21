@@ -51,6 +51,8 @@ a {
 }
 
 .section-title {
+  margin: 0;
+
   font-size: 30px;
   font-weight: normal;
   line-height: 30px;
@@ -58,15 +60,27 @@ a {
 }
 
 .additional-info {
-  background-color: #f2f6f8;
   padding-top: 68px;
   padding-bottom: 68px;
+
+  background-color: #f2f6f8;
 }
 
 .content-paragraph {
+  margin: 0;
+  margin-bottom: 24px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.content-paragraph:first-of-type {
+  margin-top: 26px;
+}
+
+.content-paragraph:last-of-type {
+  margin-bottom: 0;
 }
 
 .aside-title {
@@ -81,11 +95,21 @@ a {
 /* buttons */
 
 .button {
+  display: inline-block;
+  padding-top: 11px;
+  padding-right: 17px;
+  padding-bottom: 9px;
+  padding-left: 17px;
+
   color: #ffffff;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
+  vertical-align: top;
+
+  border-radius: 3px;
 }
 
 .button-primary {
@@ -1038,7 +1062,16 @@ a {
 
 .about-section {
   width: 540px;
-  padding-bottom: 86px;
+  padding-top: 79px;
+  padding-bottom: 85px;
+}
+
+.about-section p:nth-of-type(1) {
+  width: 540px;
+}
+
+.about-section p:nth-of-type(2) {
+  width: 400px;
 }
 
 .delivery-list {
@@ -1052,11 +1085,26 @@ a {
 
 .contacts-section {
   width: 300px;
+  padding-top: 79px;
   padding-bottom: 86px;
 }
 
+.contacts-section p:nth-of-type(1) {
+  width: 185px;
+}
+
 .map {
+  display: block;
+  width: 300px;
+  height: 158px;
+  margin-top: 31px;
+  margin-bottom: 40px;
+
   background-color: #f5f3ed;
+}
+
+.contacts-section .button {
+  width: 300px;
 }
 
 /* inner pages - common */
