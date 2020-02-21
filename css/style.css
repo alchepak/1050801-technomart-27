@@ -1075,10 +1075,40 @@ a {
 }
 
 .delivery-list {
+  margin-top: 21px;
+  margin-bottom: 36px;
+  padding-left: 36px;
+
   font-size: 18px;
   line-height: 20px;
 
   list-style: none;
+}
+
+.delivery-list li {
+  position: relative;;
+}
+
+.delivery-list li::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -36px;
+
+  display: block;
+  width: 25px;
+  height: 2px;
+
+  background-color: #ee3643;
+}
+
+.delivery-list li:not(:first-child) {
+  margin-top: 20px;
+}
+
+.about-section .button {
+  width: 220px;
 }
 
 /* index - contacts */
@@ -1123,13 +1153,46 @@ a {
 }
 
 .breadcrumbs li {
-  margin-top: 23px;
-  margin-bottom: 24px;
+  margin-top: 21px;
+  margin-bottom: 20px;
 }
 
 .breadcrumbs a {
+  position: relative;
+  margin-right: 39px;
   color: #000000;
 }
+
+.breadcrumbs a::after {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  right: -24px;
+
+  display: block;
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/icon-right-small.svg");
+}
+
+.breadcrumbs-home {
+  left: -2px;
+
+  display: block;
+  width: 15px;
+  height: 18px;
+
+  background-image: url("../img/icon-home.svg");
+  background-position: 0 2px;
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs .breadcrumbs-home::after {
+  right: -23px;
+}
+
 
 /* catalog */
 
