@@ -802,7 +802,7 @@ a {
 
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
-  box-shadow: 0 20px 40px 0 #293449;
+  box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
 
 .form-popup input,
@@ -1230,10 +1230,10 @@ a {
   width: 300px;
 }
 
-/* index - popup */
+/* index - feedback popup */
 
 .feedback-popup {
-  display: flex; /* временно для отображения результата */
+  display: block; /* временно для отображения результата */
   width: 620px;
   height: 430px;
   margin-top: -215px;
@@ -1246,6 +1246,7 @@ a {
 
 .feedback-popup .form-popup {
   width: 100%;
+  height: 100%;
 }
 
 .feedback-inputs {
@@ -1275,6 +1276,18 @@ a {
 .feedback-inputs textarea {
   width: 100%;
   margin-top: 8px;
+}
+
+/* index - map popup */
+
+.map-popup {
+  display: block; /* временно для отображения результата */
+  width: 940px;
+  height: 446px;
+  margin-top: -223px;
+  margin-left: -470px;
+
+  box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
 }
 
 /* inner pages - common */
