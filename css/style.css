@@ -1564,11 +1564,22 @@ a {
 .sort-links {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   flex-grow: 1;
   margin: 0;
 
   font-family: "PT Sans", Arial, sans-serif;
   list-style: none;
+}
+
+.sort-links li {
+  margin-right: 36px;
+  margin-left: 31px;
+  padding-top: 8px;
+}
+
+.sort-links li:last-child {
+  margin-right: 36px;
 }
 
 .sort-links a {
