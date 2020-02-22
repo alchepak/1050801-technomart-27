@@ -1590,9 +1590,43 @@ a {
   color: #000000;
 }
 
+/* catalog - sort butons */
+
 .sort-buttons {
+  display: flex;
   margin: 0;
+  margin-right: 7px;
+  padding: 0;
+
   list-style: none;
+}
+
+.sort-buttons li:not(:last-child) {
+  margin-right: 1px;
+}
+
+.sort-arrow-button {
+  display: flex;
+  width: 31px;
+  height: 38px;
+}
+
+.sort-arrow-button svg {
+  margin: auto;
+}
+
+.sort-arrow-button[href] path {
+  fill: #c5c5c5;
+}
+
+.sort-arrow-button[href]:hover path,
+.sort-arrow-button[href]:focus path,
+.sort-arrow-button[href]:active path {
+  fill: #231F20;
+}
+
+.sort-to-top {
+  background-image: url("../img/icon-down-dir.svg");
 }
 
 /* catalog - products */
