@@ -60,7 +60,7 @@ a {
 }
 
 .additional-info {
-  padding-top: 68px;
+  padding-top: 66px;
   padding-bottom: 68px;
 
   background-color: #f2f6f8;
@@ -104,10 +104,10 @@ a {
 
 .button {
   display: inline-block;
-  padding-top: 11px;
-  padding-right: 17px;
-  padding-bottom: 9px;
-  padding-left: 17px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  padding-left: 16px;
 
   color: #000000;
   font-family: "Cuprum", Arial, sans-serif;
@@ -139,6 +139,11 @@ a {
 }
 
 .button-secondary {
+  padding-top: 9px;
+  padding-right: 14px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
 
@@ -1342,11 +1347,10 @@ a {
   right: -23px;
 }
 
-
 /* catalog */
 
 .catalog-section {
-  padding-bottom: 60px;
+  padding-bottom: 59px;
 }
 
 .catalog-section h2 {
@@ -1740,6 +1744,10 @@ a {
 /* catalog - pagination */
 
 .pagination {
+  margin-top: 32px;
+}
+
+.pagination ul {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 0;
@@ -1748,12 +1756,25 @@ a {
   list-style: none;
 }
 
+.pagination li {
+  margin-right: 10px;
+}
+
+.pagination li:last-child {
+  margin-right: 6px;
+}
+
 .current-page {
   color: #ffffff;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
 
   background-color: #ee3643;
+  cursor: default;
+}
+
+.button-neighbor-page {
+  width: 140px;
 }
 
 /* catalog - product added popup */
