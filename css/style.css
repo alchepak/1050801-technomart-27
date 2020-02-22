@@ -1110,13 +1110,60 @@ a {
   margin: auto;
 }
 
+/* index - service section */
+
+.service-section {
+  padding-bottom: 0;
+}
+
+.service-section > .container {
+  padding-right: 0;
+}
+
+.service-section .section-title + p {
+  width: 405px;
+}
+
+.service-container {
+  display: flex;
+  padding-top: 23px;
+}
+
 /* index - service tabs */
 
 .service-tabs {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 46px;
+  padding-right: 16px;
+  padding-bottom: 46px;
+
   list-style: none;
 }
 
+.service-tabs::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 16px;
+
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/service-slider-delimitor.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 .service-tabs label {
+  display: block;
+  width: 240px;
+  height: 62px;
+  padding-top: 13px;
+  padding-left: 22px;
+
   color: #ffffff;
   font-size: 21px;
   font-weight: bold;
@@ -1125,18 +1172,17 @@ a {
   background-color: #32425c;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
+  cursor: pointer;
 }
 
 .service-tabs label:hover {
   background-color: #293449;
 }
 
-.service-container {
-  display: flex;
-}
-
-.service-container input:focus ~ label {
-  outline: 1px auto;
+.service-container input:nth-child(1):focus ~ .service-tabs label[for="delivery-input"],
+.service-container input:nth-child(2):focus ~ .service-tabs label[for="guarantee-input"],
+.service-container input:nth-child(3):focus ~ .service-tabs label[for="credit-input"] {
+  outline: none; /*1px auto;*/
 }
 
 .service-container input:nth-child(1):checked ~ .service-tabs label[for="delivery-input"],
@@ -1151,10 +1197,18 @@ a {
 /* index - service blocks */
 
 .service-blocks {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  padding-left: 65px;
+
   list-style: none;
 }
 
 .service-blocks h3 {
+  margin: 0;
+  margin-top: 44px;
+
   color: #32425c;
   font-size: 36px;
   font-weight: normal;
@@ -1164,6 +1218,9 @@ a {
 }
 
 .service-blocks li {
+  display: none;
+  min-height: 286px;
+
   background-position: right bottom;
   background-repeat: no-repeat;
 }
@@ -1172,12 +1229,37 @@ a {
   background-image: url("../img/service-delivery.png");
 }
 
+.service-delivery p {
+  width: 278px;
+}
+
 .service-guarantee {
   background-image: url("../img/service-guarantee.png");
 }
 
+.service-guarantee p {
+  width: 378px;
+}
+
 .service-credit {
   background-image: url("../img/service-credit.png");
+}
+
+.service-credit p {
+  width: 300px;
+}
+
+.button-credit {
+  width: 194px;
+  margin-top: 25px;
+
+  background-color: #ff5357;
+}
+
+.service-container input:nth-child(1):checked ~ .service-blocks .service-delivery,
+.service-container input:nth-child(2):checked ~ .service-blocks .service-guarantee,
+.service-container input:nth-child(3):checked ~ .service-blocks .service-credit {
+  display: block;
 }
 
 /* index - about */
@@ -1663,9 +1745,9 @@ a {
   cursor: pointer;
 }
 
-.filter-producers input:focus + label::before,
-.filter-battery input:focus + label::before {
-  outline: 1px auto;
+.filter-producers input:focus-visible + label::before,
+.filter-battery input:focus-visible + label::before {
+  outline: none; /*1px auto;*/
 }
 
 .filter-producers input:disabled + label,
