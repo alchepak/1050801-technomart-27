@@ -100,6 +100,21 @@ a {
   border-radius: 3px;
 }
 
+.new-element::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 59px;
+
+  background-image: url("../img/new-flag.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
 /* buttons */
 
 .button {
@@ -901,19 +916,37 @@ a {
 }
 
 .advantages-item {
+  position: relative;
+
   width: 300px;
   height: 123px;
   margin-right: 20px;
+  padding-top: 21px;
 
   color: #ffffff;
-  background-repeat: no-repeat;
 }
 
 .advantages-item:nth-child(3n) {
   margin-right: 0;
 }
 
+.advantages-item h3 {
+  margin: 0;
+  margin-left: 22px;
+  padding: 0;
+
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
 .advantages-item .button {
+  position: relative;
+
+  width: 135px;
+  margin-top: 12px;
+  margin-left: 25px;
+
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -927,47 +960,70 @@ a {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.advantages-item h3 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 30px;
+.advantages-item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 140px;
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .advantages-materials {
   background-color: #ffbf47;
+}
+
+.advantages-materials::before {
   background-image: url("../img/icon-1.svg");
-  background-position: right center; /* временное размещение фона */
 }
 
 .advantages-tools {
   background-color: #3bbce3;
+}
+
+.advantages-tools::before {
   background-image: url("../img/icon-2.svg");
-  background-position: right center; /* временное размещение фона */
 }
 
 .advantages-machinery {
   background-color: #dc91d8;
+}
+
+.advantages-machinery::before {
   background-image: url("../img/icon-3.svg");
-  background-position: right center; /* временное размещение фона */
+}
+
+.service-advantages li {
+  margin-top: 20px;
 }
 
 .advantages-discounts {
   background-color: #8ed78f;
+}
+
+.advantages-discounts::before {
   background-image: url("../img/icon-4.svg");
-  background-position: right center; /* временное размещение фона */
 }
 
 .advantages-delivery {
   background-color: #ffc047;
+}
+
+.advantages-delivery::before {
   background-image: url("../img/icon-5.svg");
-  background-position: right center; /* временное размещение фона */
 }
 
 /* index - product categories */
 
 .product-categories {
-  width: 620px;
-  height: 266px;
+  position: relative;
+
+  margin-top: 20px;
   margin-right: 20px;
 }
 
@@ -979,6 +1035,12 @@ a {
 }
 
 .category-slides li {
+  display: none;
+  width: 620px;
+  height: 266px;
+  padding-top: 23px;
+  padding-left: 24px;
+
   color: #ffffff;
 
   background-color: #bbb7b2;
@@ -987,6 +1049,9 @@ a {
 }
 
 .category-slides h3 {
+  margin: 0;
+  padding: 0;
+
   font-size: 36px;
   font-weight: bold;
   line-height: 36px;
@@ -994,6 +1059,9 @@ a {
 }
 
 .category-slides p {
+  margin: 0;
+  margin-top: 2px;
+
   font-size: 18px;
   line-height: 24px;
 }
@@ -1006,8 +1074,106 @@ a {
   background-image: url("../img/categ-slider-item-2.jpg");
 }
 
+.product-categories input[value="hammers"]:checked ~ .category-slides .category-hammers,
+.product-categories input[value="drill"]:checked ~ .category-slides .category-drill {
+  display: block;
+}
+
+.slider-nav-button {
+  position: absolute;
+  top: 114px;
+
+  width: 26px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-nav-button::before {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+
+  display: block;
+  width: 28px;
+  height: 28px;
+
+  border-left: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+}
+
+.slider-nav-button.slider-prev {
+  left: 24px;
+}
+
+.slider-nav-button.slider-prev::before {
+  left: 7px;
+  transform: rotate(45deg);
+}
+
+.slider-nav-button.slider-next {
+  right: 20px;
+}
+
+.slider-nav-button.slider-next::before {
+  right: 7px;
+  transform: scaleX(-1) rotate(45deg);
+}
+
+.open-catalog-button {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+
+  width: 195px;
+}
+
 .category-markers {
+  position: absolute;
+  bottom: 31px;
+  left: 50%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 150px;
+  margin: 0;
+  margin-left: -75px;
+  padding: 0;
+
   list-style: none;
+}
+
+.category-markers li {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.category-markers label {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.product-categories input[value="hammers"]:focus ~ .category-markers label[for="hammers-input"],
+.product-categories input[value="drill"]:focus ~ .category-markers label[for="drill-input"] {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgba(21, 156, 228, 0.5);
+}
+
+.product-categories input[value="hammers"]:checked ~ .category-markers label[for="hammers-input"],
+.product-categories input[value="drill"]:checked ~ .category-markers label[for="drill-input"] {
+  background-color: #ee3643;
+  border: 2px solid #ffffff;
 }
 
 /* index - service advantages */
@@ -1182,7 +1348,9 @@ a {
 .service-container input:nth-child(1):focus ~ .service-tabs label[for="delivery-input"],
 .service-container input:nth-child(2):focus ~ .service-tabs label[for="guarantee-input"],
 .service-container input:nth-child(3):focus ~ .service-tabs label[for="credit-input"] {
-  outline: none; /*1px auto;*/
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgba(21, 156, 228, 0.5);
 }
 
 .service-container input:nth-child(1):checked ~ .service-tabs label[for="delivery-input"],
@@ -1745,9 +1913,11 @@ a {
   cursor: pointer;
 }
 
-.filter-producers input:focus-visible + label::before,
-.filter-battery input:focus-visible + label::before {
-  outline: none; /*1px auto;*/
+.filter-producers input:focus + label::before,
+.filter-battery input:focus + label::before {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: rgba(21, 156, 228, 0.5);
 }
 
 .filter-producers input:disabled + label,
@@ -1938,18 +2108,8 @@ a {
 }
 
 .elements-list-item.new-element::after {
-  content: "";
-
-  position: absolute;
   top: -1px;
   right: -1px;
-
-  width: 60px;
-  height: 59px;
-
-  background-image: url("../img/new-flag.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
 }
 
 /* catalog - product buttons */
