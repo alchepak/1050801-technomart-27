@@ -658,7 +658,7 @@ a {
 .sub-menu {
   display: flex;
   flex-wrap: wrap;
-  max-width: 607px;
+  max-width: 610px;
   margin: 0;
   margin-left: auto;
   padding: 0;
@@ -1027,11 +1027,20 @@ a {
   justify-content: space-between;
   align-items: center;
 
+  padding-top: 25px;
+  padding-right: 24px;
+  padding-bottom: 26px;
+  padding-left: 28px;
+
   background-color: #f9f5f0;
 }
 
 .section-popular h2 {
   color: #32425c;
+}
+
+.section-popular .button-primary {
+  width: 253px;
 }
 
 /* elements list */
@@ -1053,7 +1062,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 220px;
-  min-height: 318px;
+  height: 318px;
   margin-right: 20px;
   margin-bottom: 20px;
 
@@ -1068,7 +1077,8 @@ a {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
-.elements-list-item[href]:active {
+.elements-list-item[href]:active,
+.elements-list-item[href]:focus {
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
   opacity: 0.3;
 }
@@ -1080,7 +1090,23 @@ a {
 }
 
 .brands-list {
-  padding-bottom: 85px;
+  padding-bottom: 64px;
+}
+
+.brands-list li:not(:nth-child(4n)) {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.brands-list .elements-list-item {
+  display: flex;
+  width: 220px;
+  height: 145px;
+  margin: 0;
+}
+
+.brands-list-item img {
+  margin: auto;
 }
 
 /* index - service tabs */
