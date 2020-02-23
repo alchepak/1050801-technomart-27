@@ -1351,8 +1351,9 @@ a {
 .service-tabs label {
   display: block;
   width: 240px;
-  height: 62px;
+  min-height: 62px;
   padding-top: 13px;
+  padding-bottom: 17px;
   padding-left: 22px;
 
   color: #ffffff;
@@ -1399,6 +1400,7 @@ a {
 }
 
 .service-blocks h3 {
+  max-width: 340px;
   margin: 0;
   margin-top: 44px;
 
@@ -1413,6 +1415,7 @@ a {
 .service-blocks li {
   display: none;
   min-height: 286px;
+  padding-bottom: 30px;
 
   background-position: right bottom;
   background-repeat: no-repeat;
