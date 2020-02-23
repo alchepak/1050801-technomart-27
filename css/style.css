@@ -1677,40 +1677,38 @@ a {
 }
 
 .filter {
+  padding-top: 11px;
   font-family: "PT Sans", Arial, sans-serif;
 }
 
-.filter fieldset {
+.filter-field-set {
   position: relative;
 
   margin: 0;
   padding: 0;
-  padding-top: 11px;
 
   border: none;
 }
 
-.filter fieldset:not(:first-of-type) {
-  padding-top: 16px;
-  border-top: 1px solid #e5e5e5;
-}
-
-.filter fieldset:last-of-type {
+.filter-field-set:last-of-type {
   margin-bottom: 55px;
 }
 
-.filter legend {
-  position: absolute;
-  left: 0;
+.filter-field-set legend {
+  width: 100%;
+  padding-top: 16px;
 
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
+
+  border-top: 1px solid #e5e5e5;
 }
 
-.filter p {
-  margin: 0;
+.filter-field-set:first-of-type legend {
+  padding-top: 0;
+  border: none;
 }
 
 .filter-input {
@@ -1736,7 +1734,7 @@ a {
 
 .price-slider {
   min-height: 80px;
-  margin-top: 44px;
+  margin-top: 14px;
   margin-bottom: 9px;
   padding-top: 29px;
 
@@ -1920,16 +1918,20 @@ a {
 .filter-battery {
   margin: 0;
   padding: 0;
-  padding-top: 24px;
-  padding-bottom: 23px;
+  padding-top: 14px;
 
   list-style: none;
 }
 
 .filter-producers li,
 .filter-battery li {
-  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 35px;
+}
+
+.filter-producers li:last-child,
+.filter-battery li:last-child {
+  padding-bottom: 23px;
 }
 
 .filter-producers label,
