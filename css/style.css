@@ -48,6 +48,7 @@ a {
 .columns {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .section-title {
@@ -875,21 +876,28 @@ a {
 .popup-controls {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 112px;
   padding-top: 37px;
-  padding-left: 80px;
+  padding-bottom: 22px;
   padding-right: 80px;
+  padding-left: 80px;
 
   background-color: #f4f4f4;
 }
 
 .popup-controls > .button {
-  width: 100%;
+  width: calc(50% - 10px);
+  margin-bottom: 15px;
 }
 
-.popup-controls > .button:not(:last-child) {
+.popup-controls > .button:nth-child(2n+1):not(:last-child) {
   margin-right: 20px;
+}
+
+.popup-controls > .button:only-child {
+  width: 100%;
 }
 
 .popup-close-button {
@@ -1526,11 +1534,15 @@ a {
 .map {
   display: block;
   width: 300px;
-  height: 158px;
+  min-height: 158px;
   margin-top: 31px;
   margin-bottom: 40px;
 
   background-color: #f5f3ed;
+}
+
+.map img {
+  display: block;
 }
 
 .contacts-section .button {
@@ -1541,7 +1553,7 @@ a {
 
 .feedback-popup {
   width: 620px;
-  height: 430px;
+  min-height: 430px;
   margin-top: -215px;
   margin-left: -310px;
 }
@@ -1558,24 +1570,29 @@ a {
   width: 460px;
   margin: 0 auto;
   padding-top: 48px;
-  padding-bottom: 38px;
+  padding-bottom: 17px;
 }
 
 .feedback-inputs .feedback-contacts {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 21px;
 }
 
 .feedback-inputs label {
-  width: 100%;
+  display: block;
+  margin-bottom: 21px;
 
   font-size: 18px;
   line-height: 18px;
 }
 
-.feedback-inputs label:not(:last-child) {
+.feedback-contacts label:nth-child(2n+1):not(:last-child) {
   margin-right: 20px;
+}
+
+.feedback-contacts label {
+  width: calc(50% - 10px);
 }
 
 .feedback-inputs input,
@@ -1588,11 +1605,15 @@ a {
 
 .map-popup {
   width: 940px;
-  height: 446px;
+  min-height: 446px;
   margin-top: -223px;
   margin-left: -470px;
 
   box-shadow: 0 0 16px 0 rgba(47, 42, 43, 0.5);
+}
+
+.map-popup img {
+  display: block;
 }
 
 /* inner pages - common */
@@ -2231,7 +2252,7 @@ a {
 
 .product-added-popup {
   width: 620px;
-  height: 282px;
+  min-height: 282px;
   margin-top: -141px;
   margin-left: -310px;
 }
