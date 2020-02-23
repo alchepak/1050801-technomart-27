@@ -664,6 +664,10 @@ a {
   margin-bottom: 49px;
 }
 
+.page-footer .logo-wrapper {
+  display: flex;
+}
+
 .page-footer .logo {
   width: 220px;
   min-height: 63px;
