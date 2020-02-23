@@ -932,9 +932,10 @@ a {
 
   display: block;
   width: 300px;
-  height: 123px;
+  min-height: 123px;
   margin-right: 20px;
   padding-top: 21px;
+  padding-bottom: 21px;
 
   color: #ffffff;
 }
@@ -944,6 +945,7 @@ a {
 }
 
 .advantages-item h3 {
+  max-width: 170px;
   margin: 0;
   margin-left: 22px;
   padding: 0;
@@ -1036,11 +1038,13 @@ a {
 .product-categories {
   position: relative;
 
+  min-height: 266px;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 .category-slides {
+  height: 100%;
   margin: 0;
   padding: 0;
 
@@ -1050,14 +1054,16 @@ a {
 .category-slides li {
   display: none;
   width: 620px;
-  height: 266px;
+  height: 100%;
   padding-top: 23px;
+  padding-right: 24px;
+  padding-bottom: 23px;
   padding-left: 24px;
 
   color: #ffffff;
 
   background-color: #bbb7b2;
-  background-position: 0 0;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 
@@ -1206,21 +1212,27 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   padding-top: 25px;
   padding-right: 24px;
-  padding-bottom: 26px;
+  padding-bottom: 16px;
   padding-left: 28px;
 
   background-color: #f9f5f0;
 }
 
 .section-popular h2 {
+  max-width: 600px;
+  margin-bottom: 10px;
+  padding-right: 20px;
+
   color: #32425c;
 }
 
 .section-popular .button-primary {
   width: 253px;
+  margin-bottom: 10px;
 }
 
 /* elements list */
@@ -1242,15 +1254,14 @@ a {
   display: flex;
   flex-direction: column;
   width: 220px;
-  height: 318px;
+  min-height: 318px;
   margin-right: 20px;
   margin-bottom: 20px;
+  padding-bottom: 21px;
 
   text-align: center;
 
-  border-color: #e5e5e5;
-  border-style: solid;
-  border-width: 1px;
+  border: 1px solid #e5e5e5;
 }
 
 .elements-list-item:hover {
@@ -1281,8 +1292,9 @@ a {
 .brands-list .elements-list-item {
   display: flex;
   width: 220px;
-  height: 145px;
+  min-height: 145px;
   margin: 0;
+  padding-bottom: 0;
 }
 
 .brands-list-item img {
@@ -2064,8 +2076,9 @@ a {
 
   display: none;
   width: 218px;
-  height: 170px;
+  min-height: 170px;
   padding-top: 43px;
+  padding-bottom: 35px;
 
   background-color: #ffffff;
 }
