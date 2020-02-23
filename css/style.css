@@ -902,18 +902,37 @@ a {
 
 .popup-close-button {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 8px;
+  right: 7px;
 
-  width: 21px;
-  height: 21px;
+  width: 25px;
+  height: 25px;
 
   background-color: transparent;
-  background-image: url("../img/icon-close.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+}
+
+.popup-close-button::before,
+.popup-close-button::after {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: -1px;
+
+  width: 27px;
+  height: 4px;
+
+  background-color: #ee3643;
+}
+
+.popup-close-button::before {
+  transform: rotate(-45deg);
+}
+
+.popup-close-button::after {
+  transform: rotate(45deg);
 }
 
 /* index - advantages */
@@ -1281,6 +1300,10 @@ a {
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
+.elements-list-item:hover::before {
+  display: none;
+}
+
 .elements-list-item[href]:active,
 .elements-list-item[href]:focus {
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
@@ -1568,7 +1591,7 @@ a {
 }
 
 .feedback-popup .popup-close-button {
-  top: 17px;
+  top: 15px;
 }
 
 .feedback-popup .form-popup {
