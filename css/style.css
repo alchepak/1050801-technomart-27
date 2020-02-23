@@ -105,8 +105,8 @@ a {
   content: "";
 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
 
   width: 60px;
   height: 59px;
@@ -952,6 +952,11 @@ a {
   margin-right: 0;
 }
 
+.advantages-item::before {
+  top: 0;
+  right: 0;
+}
+
 .advantages-item h3 {
   max-width: 170px;
   margin: 0;
@@ -1292,9 +1297,13 @@ a {
   padding-bottom: 64px;
 }
 
+.brands-list li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
 .brands-list li:not(:nth-child(4n)) {
   margin-right: 20px;
-  margin-bottom: 20px;
 }
 
 .brands-list .elements-list-item {
