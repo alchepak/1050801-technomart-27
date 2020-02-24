@@ -1695,6 +1695,14 @@ a {
   display: block;
 }
 
+.map-popup iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: none;
+}
+
 /* inner pages - common */
 
 .breadcrumbs {
