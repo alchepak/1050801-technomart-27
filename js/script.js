@@ -12,6 +12,8 @@ var isStorageSupport = true;
 var storageName = "";
 var storageMail = "";
 
+/* popup common */
+
 for (var i = 0; i < closeButtons.length; i++) {
   closeButtons[i].addEventListener("click", function() {
     if (this.parentElement) {
@@ -19,6 +21,18 @@ for (var i = 0; i < closeButtons.length; i++) {
     }
   });
 }
+
+window.addEventListener("keydown", function(evt) {
+  if (evt.keyCode === 27) {
+    var openPopup = document.querySelector(".popup:not([hidden])");
+
+    if (openPopup)
+    {
+      evt.preventDefault();
+      openPopup.hidden = true;
+    }
+  }
+});
 
 /* local storage */
 
@@ -54,9 +68,14 @@ feedbackLink.addEventListener("click", function(evt) {
 });
 
 feedbackForm.addEventListener("submit", function(evt) {
+  feedbackPopup.classList.remove("invalid-data");
+
   if (!feedbackName.value || !feedbackMail.value || !feedbackMessage.value) {
     evt.preventDefault();
 
+    // перезапуск css анимации
+    void feedbackPopup.offsetWidth;
+    feedbackPopup.classList.add("invalid-data");
   }
   else {
     if (isStorageSupport) {
@@ -65,3 +84,5 @@ feedbackForm.addEventListener("submit", function(evt) {
     }
   }
 });
+
+
