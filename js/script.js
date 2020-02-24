@@ -1,8 +1,50 @@
-/* local storage var */
+/* local storage */
 
 var isStorageSupport = true;
 var storageName = "";
 var storageMail = "";
+
+try {
+  storageName = localStorage.getItem("technomartUserName");
+  storageMail = localStorage.getItem("technomartUserMail");
+}
+catch (err) {
+  isStorageSupport = false;
+}
+
+/* slider */
+
+var slider = document.querySelector(".product-categories");
+
+if (slider) {
+  var sliderNavButton = slider.querySelectorAll(".slider-nav-button");
+
+  for (var i = 0; i < sliderNavButton.length; i++) {
+
+    sliderNavButton[i].addEventListener("click", function() {
+      var currentItem = slider.querySelector("[name='category']:checked");
+      var borderSelector = "[name='category']:first-of-type";
+      var neighborItem = currentItem.nextElementSibling;
+
+      if (this.classList.contains("slider-prev")) {
+        neighborItem = currentItem.previousElementSibling;
+        borderSelector = "[name='category']:last-of-type";
+      }
+
+      if (neighborItem.name === "category") {
+        neighborItem.checked = true;
+      }
+      else {
+        var parent = currentItem.parentElement;
+        var borderItem = parent.querySelector(borderSelector);
+        borderItem.checked = true;
+      }
+    });
+
+  }
+}
+
+/* popup common */
 
 var closeButtons = document.querySelectorAll(".popup-close-button");
 
@@ -27,16 +69,6 @@ window.addEventListener("keydown", function(evt) {
     }
   }
 });
-
-/* local storage */
-
-try {
-  storageName = localStorage.getItem("technomartUserName");
-  storageMail = localStorage.getItem("technomartUserMail");
-}
-catch (err) {
-  isStorageSupport = false;
-}
 
 /* map popup */
 
