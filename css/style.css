@@ -97,7 +97,7 @@ body {
 }
 
 img {
-   max-width: 100%
+  max-width: 100%
 }
 
 a {
@@ -425,10 +425,10 @@ a {
 .shop-button::before {
   content: "";
   position: absolute;
-  opacity: 0.3;
 
   background-position: 0 0;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 .shop-button:hover::before,
@@ -595,8 +595,8 @@ a {
 }
 
 .login-button:active path {
-   fill: #c5c5c5;
- }
+  fill: #c5c5c5;
+}
 
 .login-sign-in {
   position: relative;
@@ -933,6 +933,7 @@ a {
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 1;
 }
 
 .popup:not([hidden]) {
@@ -2011,7 +2012,7 @@ a {
 
 .price-inputs-dash {
   -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 
   font-size: 16px;
   line-height: 18px;
@@ -2271,10 +2272,6 @@ a {
   background-color: #ffffff;
 }
 
-.elements-list-item:hover > .product-buttons {
-  display: block;
-}
-
 .elements-list-item .old-price {
   width: 191px;
   margin: 0 auto;
@@ -2328,14 +2325,59 @@ a {
 
 /* catalog - product buttons */
 
+.button-product {
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+
+  width: 135px;
+  margin-left: -68px;
+
+  opacity: 0;
+}
+
+.button-product:focus {
+  opacity: 1;
+}
+
+.elements-list-item:hover > .button-product {
+  opacity: 1;
+}
+
+.button-product:focus ~ .product-image,
+.elements-list-item:hover > .product-image {
+  opacity: 0;
+}
+
+/* Селектор для выбора элемента, у родителя которого есть потомки с фокусом.
+  Не работает в IE11 и Edge, но в других браузерах позволяет одновременно
+  отобразить все скрытые кнопки в карточке при получении фокуса одной из них */
+.elements-list-item:focus-within > .button-product {
+  opacity: 1;
+}
+
 .button-buy {
-  width: 138px;
-  margin-bottom: 16px;
+  top: 43px;
 
   color: #ffffff;
 
   background-color: #63a63e;
   box-shadow: inset 0 -3px #367315;
+}
+
+.button-buy::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 14px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 .button-buy:hover,
@@ -2348,8 +2390,14 @@ a {
   box-shadow: none;
 }
 
+.button-buy:hover::before,
+.button-buy:focus::before {
+  opacity: 1;
+}
+
 .button-add-mark {
-  width: 138px;
+  top: 89px;
+
   padding-top: 8px;
   padding-bottom: 6px;
 
